@@ -1,0 +1,15 @@
+# Ignore Python virtual environments
+flask_todo_backend/venv/
+
+# Ignore Node modules in frontend
+flask_todo_frontend/node_modules/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variables
+.env
+
+# Ignore VS Code settings (optional)
+.vscode/
