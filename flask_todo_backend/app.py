@@ -3,7 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import os
 app = Flask(__name__)
-CORS(app, origins=["https://flask-to-do-kcw6.onrender.com"], supports_credentials=True)
+
+CORS(app,
+     origins=["https://flask-to-do-kcw6.onrender.com"],
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+     supports_credentials=True)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
