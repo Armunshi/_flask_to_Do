@@ -1,6 +1,7 @@
 from flask import Flask,request,jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+import os
 app = Flask(__name__)
 CORS(app)
 
@@ -54,6 +55,6 @@ def update_todo(id):
         return jsonify({"message":"Task Updated"})
     return jsonify({"error":"Task not Found"}),404
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
