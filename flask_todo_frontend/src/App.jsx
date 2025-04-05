@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import axios from "axios"
 import './App.css'
 
-const APP_URL = "http://127.0.0.1:5000/todos" 
+const APP_URL = "https://flask-to-do-backend.onrender.com" 
 
 function App() {
 
